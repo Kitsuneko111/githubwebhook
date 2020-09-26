@@ -13,7 +13,7 @@ A bot created to pull basic information from GitHub repositories and send them t
 
 You can now go back to Discord and use the following commands:
 
-`g!repo get <user/name>` 
+`g!repo get <user/repo>` 
 
 > **Note:** The linked repository must be public for this to work
 
