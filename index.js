@@ -42,12 +42,12 @@ app.post('/', (req, res) => {
       embed.setTitle(`${body.action.charAt(0).toUpperCase() + body.action.slice(1)} Issue`)
       embed.addField("Issue Name", body.issue.title)
       embed.setURL(body.issue.html_url)
-      embed.addField("Issue", body.issue.body)
+      if(body.issue.body) embed.addField("Issue", body.issue.body)
       break
     case "issue_comment":
       embed.setTitle(`New Comment On ${body.issue.title}`)
       embed.setURL(body.issue.html_url)
-      embed.addField("Comment", body.comment.body)
+      if(body.comment.body) embed.addField("Comment", body.comment.body)
       break
     case "pull_request":
       embed.setTitle(`${body.action.charAt(0).toUpperCase()+body.action.slice(1)} Pull Request`)
